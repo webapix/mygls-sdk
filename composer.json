@@ -1,0 +1,49 @@
+{
+    "name": "webapix/mygls-sdk",
+    "description": "An lightweight php SDK for the MyGLS REST API",
+    "keywords": [
+        "webapix",
+        "MyGLS"
+    ],
+    "homepage": "https://github.com/webapix/mygls-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zsolt Kaveczki",
+            "email": "zsocakave@webapix.hu",
+            "homepage": "https://webapix.hu/",
+            "role": "Developer"
+        },
+        {
+            "name": "Vencel Kátai",
+            "email": "vencel.katai@webapix.hu",
+            "homepage": "https://webapix.hu/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.5|^7.5",
+        "webapix/dot-net-json-date-formatter": "^1.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3.1",
+        "phpunit/phpunit": "^7.5|8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webapix\\GLS\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webapix\\GLS\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
+}
