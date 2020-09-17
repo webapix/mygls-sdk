@@ -38,12 +38,12 @@ class ParcelStatus
     {
         $parcelStatus = new static();
 
-        $parcelStatus->depotCity = $data['DepotCity'];
-        $parcelStatus->depotNumber = $data['DepotNumber'];
-        $parcelStatus->statusCode = $data['StatusCode'];
-        $parcelStatus->statusDate = $data['StatusDate'];
-        $parcelStatus->statusDescription = $data['StatusDescription'];
-        $parcelStatus->statusInfo = $data['StatusInfo'];
+        $parcelStatus->depotCity = (string) $data['DepotCity'];
+        $parcelStatus->depotNumber = (string) $data['DepotNumber'];
+        $parcelStatus->statusCode = (string) $data['StatusCode'];
+        $parcelStatus->statusDate = (string) $data['StatusDate'];
+        $parcelStatus->statusDescription = (string) $data['StatusDescription'];
+        $parcelStatus->statusInfo = (string) $data['StatusInfo'];
 
         return $parcelStatus;
     }
