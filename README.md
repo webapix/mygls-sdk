@@ -72,7 +72,7 @@ Hungary
 
 ## Support us
 
-If you would like to help the continued efforts of this project, any size donations are welcomed and highly appreciated.
+If you find our packages useful and would like to support our work in maintaining and regularly updating them, consider becoming a patron. Any size of donation is welcome and highly appreciated.
 
 ## Contributing
 
