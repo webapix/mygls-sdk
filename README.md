@@ -70,6 +70,10 @@ PF.: 941
 1535 Budapest   
 Hungary
 
+## Support us
+
+If you would like to help the continued efforts of this project, any size donations are welcomed and highly appreciated.
+
 ## Contributing
 
 Contributions are welcome! When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.

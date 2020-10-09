@@ -11,7 +11,7 @@ class PrepareLabels extends Request
     /**
      * @var string
      */
-    protected $endpoint = 'PrintLabels';
+    protected $endpoint = 'PrepareLabels';
 
     /** @var Parcel[] */
     protected $parcelList = [];

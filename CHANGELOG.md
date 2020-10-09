@@ -9,3 +9,7 @@ All notable changes to `mygls-sdk` will be documented in this file
 ## 1.0.1 - 2020-09-17
 
 - fix ParcelStatus fromArray method by adding string cast to fields
+
+## 1.0.2 - 2020-10-09
+
+- fix wrong endpoint in PrepareLabels request
