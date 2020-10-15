@@ -13,3 +13,7 @@ All notable changes to `mygls-sdk` will be documented in this file
 ## 1.0.2 - 2020-10-09
 
 - fix wrong endpoint in PrepareLabels request
+
+## 1.0.3 - 2020-10-15
+
+- fix guzzlehttp/guzzle version constraint
