@@ -30,7 +30,7 @@ class SMS implements Service
         return [
             'Code' => 'SM1',
             'SM1Parameter' => [
-                'StringValue' => $this->phoneNumber.'|'.$this->text,
+                'Value' => $this->phoneNumber.'|'.$this->text,
             ],
         ];
     }

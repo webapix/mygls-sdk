@@ -17,3 +17,7 @@ All notable changes to `mygls-sdk` will be documented in this file
 ## 1.0.3 - 2020-10-15
 
 - fix guzzlehttp/guzzle version constraint
+
+## 1.0.4 - 2020-10-15
+
+- fix SMS service parameter name
