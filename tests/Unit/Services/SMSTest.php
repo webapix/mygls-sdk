@@ -15,7 +15,7 @@ class SMSTest extends TestCase
         $this->assertEquals([
             'Code' => 'SM1',
             'SM1Parameter' => [
-                'StringValue' => '+3630123456789|Your package is on its way to GLS facility!',
+                'Value' => '+3630123456789|Your package is on its way to GLS facility!',
             ],
         ], $service->toArray());
     }
