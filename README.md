@@ -44,7 +44,7 @@ $response = $client->on($account)->request($request);
 if ($response->successfull()) {
 
     // get the pdf
-    $response->getPdf()
+    $response->getPdf();
 }
 ```
 

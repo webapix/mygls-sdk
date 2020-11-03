@@ -25,3 +25,7 @@ All notable changes to `mygls-sdk` will be documented in this file
 ## 1.0.5 - 2020-01-03
 
 - fix clientReference in response
+
+# 1.1.0 - 2020-01-03
+
+- add Pick&Return service
