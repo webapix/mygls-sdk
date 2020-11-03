@@ -9,9 +9,9 @@ class PrintLabelsInfo extends ParcelInfo
      */
     protected $parcelNumber;
 
-    public function __construct(string $clientReference, int $parcelId, int $parcelNumber)
+    public function __construct(int $parcelId, int $parcelNumber, ?string $clientReference = null)
     {
-        parent::__construct($clientReference, $parcelId);
+        parent::__construct($parcelId, $clientReference);
 
         $this->parcelNumber = $parcelNumber;
     }

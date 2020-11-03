@@ -15,9 +15,9 @@ class PrintLabelsInfoFactory extends Factory
     {
         return array_merge(
             [
-                'ClientReference' => 'test',
                 'ParcelId' => 12345,
                 'ParcelNumber' => 54321,
+                'ClientReference' => 'test',
             ],
             $extra
         );

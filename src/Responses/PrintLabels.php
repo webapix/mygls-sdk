@@ -41,9 +41,9 @@ class PrintLabels extends Response
 
         foreach ($this->data['PrintLabelsInfoList'] as $printLabelInfo) {
             $this->printLablesInfo[] = new PrintLabelsInfo(
-                $printLabelInfo['ClientReference'],
                 $printLabelInfo['ParcelId'],
-                $printLabelInfo['ParcelNumber']
+                $printLabelInfo['ParcelNumber'],
+                $printLabelInfo['ClientReference']
             );
         }
     }
