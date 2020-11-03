@@ -26,7 +26,7 @@ class PrepareLabels extends Response
         }
 
         foreach ($this->data['ParcelInfoList'] as $parcelInfo) {
-            $this->parcelList[] = new ParcelInfo($parcelInfo['ClientReference'], $parcelInfo['ParcelId']);
+            $this->parcelList[] = new ParcelInfo($parcelInfo['ParcelId'], $parcelInfo['ClientReference']);
         }
     }
 }

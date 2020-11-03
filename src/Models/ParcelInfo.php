@@ -5,7 +5,7 @@ namespace Webapix\GLS\Models;
 class ParcelInfo
 {
     /**
-     * @var string
+     * @var null|string
      */
     protected $clientReference;
 
@@ -14,13 +14,13 @@ class ParcelInfo
      */
     protected $parcelId;
 
-    public function __construct(string $clientReference, int $parcelId)
+    public function __construct(int $parcelId, ?string $clientReference = null)
     {
         $this->clientReference = $clientReference;
         $this->parcelId = $parcelId;
     }
 
-    public function clientReference(): string
+    public function clientReference(): ?string
     {
         return $this->clientReference;
     }
