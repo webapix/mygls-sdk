@@ -22,10 +22,16 @@ All notable changes to `mygls-sdk` will be documented in this file
 
 - fix SMS service parameter name
 
-## 1.0.5 - 2020-01-03
+## 1.0.5 - 2020-11-03
 
 - fix clientReference in response
 
-# 1.1.0 - 2020-01-03
+# 1.1.0 - 2020-11-03
 
 - add Pick&Return service
+
+# 1.2.0 - 2020-12-12
+
+- add Contact service
+- add Insurance service
+- add language ISO code parameter to GetParcelStatuses request

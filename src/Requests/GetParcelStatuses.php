@@ -22,10 +22,26 @@ class GetParcelStatuses extends Request
      */
     protected $returnPod;
 
-    public function __construct(int $parcelNumber, bool $returnPod = false)
+    /**
+     * @var string
+     */
+    protected $languageIsoCode;
+
+    public function __construct(int $parcelNumber, bool $returnPod = false, string $languageIsoCode = 'EN')
     {
         $this->parcelNumber = $parcelNumber;
         $this->returnPod = $returnPod;
+        $this->languageIsoCode = $languageIsoCode;
+    }
+
+    public function setLanguageIsoCode(string $code)
+    {
+        $this->languageIsoCode = $code;
+    }
+
+    public function returnWithPodFile()
+    {
+        $this->returnPod = true;
     }
 
     public function toArray(): array
@@ -33,6 +49,7 @@ class GetParcelStatuses extends Request
         return [
             'ParcelNumber' => $this->parcelNumber,
             'ReturnPOD' => $this->returnPod,
+            'LanguageIsoCode' => $this->languageIsoCode,
         ];
     }
 
