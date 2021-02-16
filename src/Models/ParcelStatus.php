@@ -15,9 +15,9 @@ class ParcelStatus
     protected const FIXED_DELIVERY = 9;
     protected const HOLIDAY = 11;
     protected const NOTICE_LEFT = 12;
-    protected const DEPO_ROUTING_FAILURE = 13;
+    protected const DEPOT_ROUTING_FAILURE = 13;
     protected const CLOSED = 14;
-    protected const LACT_OF_TIME = 15;
+    protected const LACK_OF_TIME = 15;
     protected const LACK_OF_MONEY = 16;
     protected const REFUSED = 17;
     protected const WRONG_ADDRESS = 18;
@@ -31,7 +31,7 @@ class ParcelStatus
     protected const HUB_INBOUND = 26;
     protected const SMALL_PARCEL = 27;
     protected const HUB_DAMAGED = 28;
-    protected const NO_DATA_VAVAILABLE = 29;
+    protected const NO_DATA_AVAILABLE = 29;
     protected const DAMAGED = 30;
     protected const TOTALLY_DAMAGED = 31;
     protected const DELIVERY_IN_THE_EVENING = 32;
@@ -53,7 +53,7 @@ class ParcelStatus
     protected const PARCELSHOP_STORAGE = 56;
     protected const PARCELSHOP_RETURN = 57;
     protected const DELIVERED_TO_NEIGHBOUR = 58;
-    protected const CHANGD_DLIVERYADRES = 80;
+    protected const CHANGED_DELIVERY_ADDRESS = 80;
     protected const RQINFO_NORMAL = 81;
     protected const REQFWD_MISROUTED = 82;
     protected const PSPR_REGISTERED = 83;
@@ -65,7 +65,7 @@ class ParcelStatus
     protected const INSUFFICIENT_LABEL = 89;
     protected const POSTED_VIA_DIFFERENT_MODE = 90;
     protected const PSPR_CANCELLED = 91;
-    protected const CSOMAGPONT_UPDATE = 94;
+    protected const PARCELSHOP_UPDATE = 94;
 
     /**
      * @var string
