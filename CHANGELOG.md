@@ -35,3 +35,7 @@ All notable changes to `mygls-sdk` will be documented in this file
 - add Contact service
 - add Insurance service
 - add language ISO code parameter to GetParcelStatuses request
+
+# 1.3.0 - 2021-02-16
+
+- add parcel statuses
