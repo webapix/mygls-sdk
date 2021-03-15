@@ -54,7 +54,21 @@ class GetPrintedLabelsTest extends TestCase
     }
 
     /** @test */
-    public function it_can_return_a_reponse()
+    public function it_can_set_the_type_of_printer()
+    {
+        $request = new GetPrintedLabels;
+        $request->typeOfPrinter('Thermo');
+
+        $this->assertEquals([
+            'ParcelIdList' => [],
+            'PrintPosition' => 1,
+            'ShowPrintDialog' => false,
+            'TypeOfPrinter' => 'Thermo',
+        ], $request->toArray());
+    }
+
+    /** @test */
+    public function it_can_return_a_response()
     {
         $request = new GetPrintedLabels;
 

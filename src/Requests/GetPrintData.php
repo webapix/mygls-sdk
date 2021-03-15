@@ -16,9 +16,17 @@ class GetPrintData extends Request
     /** @var Parcel[] */
     protected $parcelList = [];
 
+    /** @var int[] */
+    protected $parcelIdList = [];
+
     public function addParcel(Parcel $parcel)
     {
         $this->parcelList[] = $parcel;
+    }
+
+    public function addParcelId(int $id)
+    {
+        $this->parcelIdList[] = $id;
     }
 
     public function makeResponse(?array $data): Response
@@ -32,6 +40,7 @@ class GetPrintData extends Request
             'ParcelList' => array_map(function (Parcel $parcel) {
                 return $parcel->toArray();
             }, $this->parcelList),
+            'ParcelIdList' => $this->parcelIdList,
         ];
     }
 }

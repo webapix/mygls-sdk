@@ -22,6 +22,11 @@ class PrintLabels extends Request
     protected $printPosition = 1;
 
     /**
+     * @var null|string
+     */
+    protected $typeOfPrinter = null;
+
+    /**
      * @var bool
      */
     protected $showPrintDialog = false;
@@ -41,6 +46,11 @@ class PrintLabels extends Request
         $this->showPrintDialog = true;
     }
 
+    public function typeOfPrinter(string $type)
+    {
+        $this->typeOfPrinter = $type;
+    }
+
     public function makeResponse(?array $data): Response
     {
         return new PrintLabelsResponse($data);
@@ -48,12 +58,18 @@ class PrintLabels extends Request
 
     public function toArray(): array
     {
-        return [
+        $params = [
             'ParcelList' => array_map(function (Parcel $parcel) {
                 return $parcel->toArray();
             }, $this->parcelList),
             'PrintPosition' => $this->printPosition,
             'ShowPrintDialog' => $this->showPrintDialog,
         ];
+
+        if ($this->typeOfPrinter) {
+            $params['TypeOfPrinter'] = $this->typeOfPrinter;
+        }
+
+        return $params;
     }
 }

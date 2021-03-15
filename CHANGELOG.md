@@ -2,6 +2,11 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.5.0 - 2021-03-15
+
+- add ParcelIdList to GetPrintData request
+- add TypeOfPrinter to PrintLabels and GetPrintedLabels request
+
 # 1.4.0 - 2021-02-23
 
 - add support for PHP 8.0
