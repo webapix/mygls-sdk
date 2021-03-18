@@ -20,7 +20,7 @@ class AgreementAboutDangerousGoodsByRoadTest extends TestCase
                 'InnerCount'  => 1,
                 'PackSize'    => 1,
                 'UnNumber'    => 1002,
-            ]
+            ],
         ], $service->toArray());
     }
 }
