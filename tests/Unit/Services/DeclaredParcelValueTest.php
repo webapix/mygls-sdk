@@ -16,7 +16,7 @@ class DeclaredParcelValueTest extends TestCase
             'Code' => 'DPV',
             'DPVParameter' => [
                 'StringValue' => 'APITEST',
-                'DecimalValue' => 12500
+                'DecimalValue' => 12500,
             ],
         ], $service->toArray());
     }
