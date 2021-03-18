@@ -2,6 +2,11 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.6.0 - 2021-03-18
+
+- add AgreementAboutDangerousGoodsByRoad service
+- add DeclaredParcelValue service
+
 # 1.5.0 - 2021-03-15
 
 - add ParcelIdList to GetPrintData request
