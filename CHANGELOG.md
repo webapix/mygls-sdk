@@ -2,6 +2,10 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.6.1 - 2021-03-20
+
+-fix AgreementAboutDangerousGoodsByRoad and DeclaredParcelValue services
+
 # 1.6.0 - 2021-03-18
 
 - add AgreementAboutDangerousGoodsByRoad service
