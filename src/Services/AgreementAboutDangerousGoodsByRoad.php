@@ -2,10 +2,12 @@
 
 namespace Webapix\GLS\Services;
 
+use Webapix\GLS\Contracts\Service;
+
 /**
  * AgreementAboutDangerousGoodsByRoad Service.
  */
-class AgreementAboutDangerousGoodsByRoad
+class AgreementAboutDangerousGoodsByRoad implements Service
 {
     /**
      * @var int

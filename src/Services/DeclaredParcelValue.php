@@ -2,10 +2,12 @@
 
 namespace Webapix\GLS\Services;
 
+use Webapix\GLS\Contracts\Service;
+
 /**
  * DeclaredParcelValue Service.
  */
-class DeclaredParcelValue
+class DeclaredParcelValue implements Service
 {
     /**
      * @var string
