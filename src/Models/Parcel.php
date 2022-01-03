@@ -178,7 +178,7 @@ class Parcel
     }
 
     /**
-     * @param Service[] $services
+     * @param  Service[]  $services
      * @return Parcel
      */
     public function setServices(array $services): Parcel
