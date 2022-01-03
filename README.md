@@ -1,5 +1,5 @@
 # GLS SDK for JSON REST API
-[![Build Status](https://travis-ci.com/webapix/mygls-sdk.svg?branch=master)](https://travis-ci.com/webapix/mygls-sdk)
+[![Tests](https://github.com/webapix/mygls-sdk/workflows/Tests/badge.svg)](https://github.com/webapix/mygls-sdk/actions?query=workflow%3ATests+branch%3Amaster)
 [![StyleCI](https://github.styleci.io/repos/295666140/shield?branch=master)](https://github.styleci.io/repos/295666140?branch=master)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
@@ -66,8 +66,8 @@ According to the postcardware concept, if you use the software for your project(
 Please send it to:
 
 WEBAPIX KFT.   
-PF.: 941   
-1535 Budapest   
+Hűvösvölgyi út 54. 2.ép 3.emelet   
+1021 Budapest   
 Hungary
 
 ## Support us

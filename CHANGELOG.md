@@ -2,6 +2,10 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.7.0 - 2022-01-03
+
+- add support for PHP 8.1
+
 # 1.6.1 - 2021-03-20
 
 -fix AgreementAboutDangerousGoodsByRoad and DeclaredParcelValue services
