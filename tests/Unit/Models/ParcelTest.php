@@ -60,4 +60,13 @@ class ParcelTest extends TestCase
                 'StringValue' => 15496,
             ], ], $parcel->toArray()['ServiceList'][0]);
     }
+
+    /** @test */
+    public function cod_amount_can_be_nullable()
+    {
+        $parcel = (new Parcel)
+            ->setCodAmount(null);
+
+        $this->assertNull($parcel->getCodAmount());
+    }
 }

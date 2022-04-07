@@ -27,7 +27,7 @@ class Parcel
     protected $count = 1;
 
     /**
-     * @var float
+     * @var float|null
      */
     protected $codAmount = 0;
 
@@ -97,12 +97,12 @@ class Parcel
         return $this;
     }
 
-    public function getCodAmount(): float
+    public function getCodAmount(): ?float
     {
         return $this->codAmount;
     }
 
-    public function setCodAmount(float $codAmount): self
+    public function setCodAmount(?float $codAmount): self
     {
         $this->codAmount = $codAmount;
 
