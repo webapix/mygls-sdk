@@ -2,6 +2,10 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.7.1 - 2022-04-07
+
+- Allow CodAmount to be nullable
+
 # 1.7.0 - 2022-01-03
 
 - add support for PHP 8.1
