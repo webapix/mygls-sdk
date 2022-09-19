@@ -84,7 +84,7 @@ class ParcelTest extends TestCase
                 'Name' => 'Delivery Address Name',
                 'Street' => 'Delivery Address Street',
                 'ZipCode' => 'Delivery Address ZipCode',
-            ]
+            ],
         ]);
 
         $parcel = Parcel::fromArray($data);
