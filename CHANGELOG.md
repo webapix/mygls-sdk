@@ -2,6 +2,10 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.7.2 - 2022-09-19
+
+- handling null values when creating parcel from array
+
 # 1.7.1 - 2022-04-07
 
 - Allow CodAmount to be nullable

@@ -4,7 +4,7 @@ namespace Webapix\GLS\Contracts;
 
 interface Contact
 {
-    public function contactName(): string;
+    public function contactName(): ?string;
 
     public function contactPhone(): ?string;
 

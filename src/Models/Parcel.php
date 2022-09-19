@@ -279,10 +279,21 @@ class Parcel
             $addressData['HouseNumber']
         );
 
-        $address->setContactName($addressData['ContactName']);
-        $address->setContactPhone($addressData['ContactPhone']);
-        $address->setContactEmail($addressData['ContactEmail']);
-        $address->setHouseNumberInfo($addressData['HouseNumberInfo']);
+        if (isset($addressData['ContactName'])) {
+            $address->setContactName($addressData['ContactName']);
+        }
+
+        if (isset($addressData['ContactPhone'])) {
+            $address->setContactPhone($addressData['ContactPhone']);
+        }
+
+        if (isset($addressData['ContactEmail'])) {
+            $address->setContactEmail($addressData['ContactEmail']);
+        }
+
+        if (isset($addressData['HouseNumberInfo'])) {
+            $address->setContactName($addressData['HouseNumberInfo']);
+        }
 
         return $address;
     }

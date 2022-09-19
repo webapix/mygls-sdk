@@ -28,7 +28,7 @@ class Contact implements ContactContract
         $this->setContactEmail($contactEmail);
     }
 
-    public function setContactName(string $name): void
+    public function setContactName(?string $name): void
     {
         $this->contactName = $name;
     }
@@ -43,7 +43,7 @@ class Contact implements ContactContract
         $this->contactPhone = $phone;
     }
 
-    public function contactName(): string
+    public function contactName(): ?string
     {
         return $this->contactName;
     }

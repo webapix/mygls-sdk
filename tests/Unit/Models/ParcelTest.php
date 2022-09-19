@@ -6,6 +6,7 @@ use Webapix\GLS\Contracts\Address;
 use Webapix\GLS\Models\Parcel;
 use Webapix\GLS\Services\ParcelShopDelivery;
 use Webapix\GLS\Services\SMS;
+use Webapix\GLS\Tests\Factories\ParcelFactory;
 use Webapix\GLS\Tests\Mocks\TestAddress;
 use Webapix\GLS\Tests\TestCase;
 
@@ -68,5 +69,27 @@ class ParcelTest extends TestCase
             ->setCodAmount(null);
 
         $this->assertNull($parcel->getCodAmount());
+    }
+
+    /** @test */
+    public function it_can_create_from_array_when_contact_information_is_missing()
+    {
+        $data = ParcelFactory::new()->create([
+            'DeliveryAddress' => [
+                'City' => 'Sülysáp',
+                'ContactPhone' => '+3630123456789',
+                'CountryIsoCode' => 'HU',
+                'HouseNumber' => '1',
+                'HouseNumberInfo' => null,
+                'Name' => 'Delivery Address Name',
+                'Street' => 'Delivery Address Street',
+                'ZipCode' => 'Delivery Address ZipCode',
+            ]
+        ]);
+
+        $parcel = Parcel::fromArray($data);
+
+        $this->assertNull($parcel->getDeliveryInfo()->contactName());
+        $this->assertNull($parcel->getDeliveryInfo()->contactEmail());
     }
 }
