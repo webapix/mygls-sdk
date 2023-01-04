@@ -3,6 +3,7 @@
 namespace Webapix\GLS\Responses;
 
 use ArrayAccess;
+use LogicException;
 use Webapix\GLS\Contracts\Response as ResponseContract;
 use Webapix\GLS\ErrorCollection;
 
@@ -71,7 +72,7 @@ abstract class Response implements ResponseContract, ArrayAccess
      * @param  mixed  $value
      * @return void
      *
-     * @throws \LogicException
+     * @throws LogicException
      */
     public function offsetSet($offset, $value)
     {
@@ -84,7 +85,7 @@ abstract class Response implements ResponseContract, ArrayAccess
      * @param  string  $offset
      * @return void
      *
-     * @throws \LogicException
+     * @throws LogicException
      */
     public function offsetUnset($offset)
     {

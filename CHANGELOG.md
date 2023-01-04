@@ -2,6 +2,10 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 1.7.3 - 2023-01-04
+
+- add missing exception class
+
 # 1.7.2 - 2022-09-19
 
 - handling null values when creating parcel from array

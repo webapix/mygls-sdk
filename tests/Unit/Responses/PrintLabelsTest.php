@@ -2,6 +2,7 @@
 
 namespace Webapix\GLS\Tests\Unit\Responses;
 
+use LogicException;
 use Webapix\GLS\ErrorCollection;
 use Webapix\GLS\Responses\PrintLabels;
 use Webapix\GLS\Tests\Factories\PrintLabelsFactory;
@@ -84,6 +85,15 @@ class PrintLabelsTest extends TestCase
         $this->assertTrue(isset($response['Labels']));
 
         $this->assertEquals($data['Labels'], $response['Labels']);
+    }
+
+    /** @test */
+    public function array_access_exception()
+    {
+        $this->expectException(LogicException::class);
+
+        $response = new PrintLabels(PrintLabelsFactory::new()->create());
+        $response['non-existant'] = 'dummy';
     }
 
     /** @test */
