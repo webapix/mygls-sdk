@@ -118,6 +118,7 @@ class ClientTest extends TestCase
 
         $this->mockHttpClient
             ->shouldReceive('request')
+            ->once()
             ->with(m::any(), m::any(), m::subset($exceptedSubset))
             ->andReturn(new Response(200, []))
             ->getMock();
