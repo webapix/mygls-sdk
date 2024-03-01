@@ -65,9 +65,9 @@ According to the postcardware concept, if you use the software for your project(
 
 Please send it to:
 
-WEBAPIX KFT.   
-Hűvösvölgyi út 54. 2.ép 3.emelet   
-1021 Budapest   
+WEBAPIX KFT.
+Kőris utca 2/E, 2/1  
+2051 Biatorbágy  
 Hungary
 
 ## Support us
