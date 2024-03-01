@@ -13,13 +13,13 @@ class AgreementAboutDangerousGoodsByRoadTest extends TestCase
         $service = new AgreementAboutDangerousGoodsByRoad(2, 4, 1, 1, 1002);
 
         $this->assertEquals([
-            'Code'         => 'ADR',
+            'Code' => 'ADR',
             'ADRParameter' => [
                 'AdrItemType' => 2,
-                'AmountUnit'  => 4,
-                'InnerCount'  => 1,
-                'PackSize'    => 1,
-                'UnNumber'    => 1002,
+                'AmountUnit' => 4,
+                'InnerCount' => 1,
+                'PackSize' => 1,
+                'UnNumber' => 1002,
             ],
         ], $service->toArray());
     }
