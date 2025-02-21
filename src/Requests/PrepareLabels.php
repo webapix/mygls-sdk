@@ -16,6 +16,14 @@ class PrepareLabels extends Request
     /** @var Parcel[] */
     protected $parcelList = [];
 
+    /** @var string */
+    protected $webshopEngine;
+
+    public function __construct(string $webshopEngine)
+    {
+        $this->webshopEngine = $webshopEngine;
+    }
+
     public function addParcel(Parcel $parcel)
     {
         $this->parcelList[] = $parcel;
@@ -32,6 +40,7 @@ class PrepareLabels extends Request
             'ParcelList' => array_map(function (Parcel $parcel) {
                 return $parcel->toArray();
             }, $this->parcelList),
+            'WebshopEngine' => $this->webshopEngine,
         ];
     }
 }

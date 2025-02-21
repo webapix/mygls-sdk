@@ -2,6 +2,10 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 3.0.0 - 2025-02-21
+
+- add WebshopEngine field
+
 # 2.0.1 - 2024-06-18
 
 - add CodCurrency to Parcel

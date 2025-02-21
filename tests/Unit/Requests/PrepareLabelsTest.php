@@ -11,19 +11,19 @@ class PrepareLabelsTest extends TestCase
     /** @test */
     public function it_can_set_parcels()
     {
-        $request = new PrepareLabels;
+        $request = new PrepareLabels('Laravel');
 
         $request->addParcel($parcel1 = ParcelFactory::new()->model());
-        $this->assertEquals(['ParcelList' => [$parcel1->toArray()]], $request->toArray());
+        $this->assertEquals(['ParcelList' => [$parcel1->toArray()], 'WebshopEngine' => 'Laravel'], $request->toArray());
 
         $request->addParcel($parcel2 = ParcelFactory::new()->model());
-        $this->assertEquals(['ParcelList' => [$parcel1->toArray(), $parcel2->toArray()]], $request->toArray());
+        $this->assertEquals(['ParcelList' => [$parcel1->toArray(), $parcel2->toArray()], 'WebshopEngine' => 'Laravel'], $request->toArray());
     }
 
     /** @test */
     public function it_can_return_a_response()
     {
-        $request = new PrepareLabels;
+        $request = new PrepareLabels('Laravel');
 
         $this->assertInstanceOf(\Webapix\GLS\Responses\PrepareLabels::class, $request->makeResponse([]));
     }

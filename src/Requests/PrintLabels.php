@@ -31,6 +31,14 @@ class PrintLabels extends Request
      */
     protected $showPrintDialog = false;
 
+    /** @var string */
+    protected $webshopEngine;
+
+    public function __construct(string $webshopEngine)
+    {
+        $this->webshopEngine = $webshopEngine;
+    }
+
     public function addParcel(Parcel $parcel)
     {
         $this->parcelList[] = $parcel;
@@ -64,6 +72,7 @@ class PrintLabels extends Request
             }, $this->parcelList),
             'PrintPosition' => $this->printPosition,
             'ShowPrintDialog' => $this->showPrintDialog,
+            'WebshopEngine' => $this->webshopEngine,
         ];
 
         if ($this->typeOfPrinter) {
