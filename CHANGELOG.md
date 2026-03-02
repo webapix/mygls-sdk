@@ -2,7 +2,7 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
-# 3.0.1 - Unreleased
+# 3.0.1 - 2026-03-02
 
 - fix HouseNumberInfo incorrectly mapped to ContactName in Parcel::createAddress()
 - fix duplicate Count key in Parcel::toArray()
