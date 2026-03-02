@@ -1,6 +1,6 @@
 <?php
 
-namespace Webapix\GLS\Tests\Unit\Unit\Models;
+namespace Webapix\GLS\Tests\Unit\Models;
 
 use Webapix\GLS\Models\Address;
 use Webapix\GLS\Tests\TestCase;
