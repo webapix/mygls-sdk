@@ -2,6 +2,11 @@
 
 All notable changes to `mygls-sdk` will be documented in this file
 
+# 3.0.1 - 2026-03-02
+
+- fix HouseNumberInfo incorrectly mapped to ContactName in Parcel::createAddress()
+- fix duplicate Count key in Parcel::toArray()
+
 # 3.0.0 - 2025-02-21
 
 - add WebshopEngine field

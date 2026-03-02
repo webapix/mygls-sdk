@@ -94,4 +94,77 @@ class ParcelTest extends TestCase
         $this->assertNull($parcel->getDeliveryInfo()->contactName());
         $this->assertNull($parcel->getDeliveryInfo()->contactEmail());
     }
+
+    /** @test */
+    public function it_preserves_house_number_info_and_does_not_override_contact_name()
+    {
+        $data = ParcelFactory::new()->create([
+            'DeliveryAddress' => [
+                'City' => 'Sülysáp',
+                'ContactEmail' => 'test@example.com',
+                'ContactName' => 'Test Test',
+                'ContactPhone' => '+3630123456789',
+                'CountryIsoCode' => 'HU',
+                'HouseNumber' => '1',
+                'HouseNumberInfo' => '2. épület 3. emelet',
+                'Name' => 'Delivery Address Name',
+                'Street' => 'Delivery Address Street',
+                'ZipCode' => 'Delivery Address ZipCode',
+            ],
+        ]);
+
+        $parcel = Parcel::fromArray($data);
+
+        $this->assertInstanceOf(Address::class, $parcel->getDeliveryInfo());
+        $this->assertEquals('2. épület 3. emelet', $parcel->getDeliveryInfo()->houseNumberInfo());
+        $this->assertEquals('Test Test', $parcel->getDeliveryInfo()->contactName());
+    }
+
+    /** @test */
+    public function it_sets_house_number_info_when_contact_name_is_missing()
+    {
+        $data = ParcelFactory::new()->create([
+            'DeliveryAddress' => [
+                'City' => 'Sülysáp',
+                'ContactPhone' => '+3630123456789',
+                'CountryIsoCode' => 'HU',
+                'HouseNumber' => '1',
+                'HouseNumberInfo' => 'B épület',
+                'Name' => 'Delivery Address Name',
+                'Street' => 'Delivery Address Street',
+                'ZipCode' => 'Delivery Address ZipCode',
+            ],
+        ]);
+
+        $parcel = Parcel::fromArray($data);
+
+        $this->assertInstanceOf(Address::class, $parcel->getDeliveryInfo());
+        $this->assertEquals('B épület', $parcel->getDeliveryInfo()->houseNumberInfo());
+        $this->assertNull($parcel->getDeliveryInfo()->contactName());
+    }
+
+    /** @test */
+    public function it_preserves_house_number_info_on_pickup_address()
+    {
+        $data = ParcelFactory::new()->create([
+            'PickupAddress' => [
+                'City' => 'Budapest',
+                'ContactEmail' => 'test@example.com',
+                'ContactName' => 'Pickup Contact',
+                'ContactPhone' => '+3620123456789',
+                'CountryIsoCode' => 'HU',
+                'HouseNumber' => '6',
+                'HouseNumberInfo' => 'A lépcsőház',
+                'Name' => 'Test name',
+                'Street' => 'street',
+                'ZipCode' => '12345',
+            ],
+        ]);
+
+        $parcel = Parcel::fromArray($data);
+
+        $this->assertInstanceOf(Address::class, $parcel->getPickupAddress());
+        $this->assertEquals('A lépcsőház', $parcel->getPickupAddress()->houseNumberInfo());
+        $this->assertEquals('Pickup Contact', $parcel->getPickupAddress()->contactName());
+    }
 }

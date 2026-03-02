@@ -313,7 +313,7 @@ class Parcel
         }
 
         if (isset($addressData['HouseNumberInfo'])) {
-            $address->setContactName($addressData['HouseNumberInfo']);
+            $address->setHouseNumberInfo($addressData['HouseNumberInfo']);
         }
 
         return $address;
